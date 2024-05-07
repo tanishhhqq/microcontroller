@@ -1,4 +1,4 @@
-#include <xc.h> // Include the header file for PIC microcontroller
+#include <p18f4520.h> // Include the header file for PIC microcontroller
 
 #pragma config OSC = HS // Set oscillator configuration
 #pragma config PWRT = OFF // Disable Power-up Timer
@@ -15,7 +15,7 @@ void main(void) {
     RCSTAbits.SPEN = 1; // Enable Serial Port
 
     for (i = 0; i < 5; i++) {
-        while (!PIR1bits.TXIF); // Wait until transmit buffer is empty
+        while (PIR1bits.TXIF==0); // Wait until transmit buffer is empty
         TXREG = text[i]; // Transmit a character
     }
 
