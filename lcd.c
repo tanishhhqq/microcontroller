@@ -10,7 +10,7 @@ void msdelay(unsigned int itime);
 
 #define Idata PORTD // Declare idata variable for PORTD
 #define rs PORTCbits.RC0 // Declare rs variable for pin RC0
-#define zw PORTBbits.RB1 // Declare zw variable for pin RB1
+#define rw PORTBbits.RB1 // Declare zw variable for pin RB1
 #define en PORTCbits.RC2 // Declare en variable for pin RC2
 
 void main() {
